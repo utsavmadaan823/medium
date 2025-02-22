@@ -1,4 +1,11 @@
 {
+  "prompts":{
+    "decide_suitable_content_writing_framework_with_type_topic" : "DECIDE SUITABLE CONTENT WRITING FRAMEWORK : Choose 1 from most suitable below mentioned content writing frameworks & model according to the decided article type ({type}), decided content writing field ({field}), decided content writing sub-field ({subfield}) & article topic ({topic}) :\n{frameworks}",
+    "decide_suitable_content_writing_framework_with_type" : "DECIDE SUITABLE CONTENT WRITING FRAMEWORK : Choose 1 from most suitable below mentioned content writing frameworks & model according to the decided article type ({type}), decided content writing field ({field}) & decided content writing sub-field ({subfield}) :\n{frameworks}",
+    "writing_instructions" : "UNDERSTAND COPYWRITING CONTENT QUALITY GUIDELINES & REQUIRED ATTRIBUTES :\n• Comprehensively prepare list of required attributes that a good copywriting content should possess & copywriting content quality guidelines that a good copywriting content should follow.\n• Need to use above copywriting content quality guidelines & list of required attributes to generate compliant article & topic in following steps.\n• Output above copywriting content quality guidelines & required list of attributes in separate canvas / document.",
+    "decide_article_topic" : "DECIDE ARTICLE TOPIC :\n• Research current trends and developments in {subfield} ({field}) field, focusing on recent advancements and near-future potential.\n• Identify as many distinct sub-fields within {subfield} ({field}) field field that are currently relevant and interesting.\n• Now generate 1 specific article idea under any sub-fields decided above considering current trends & developments & also comply with all previous steps including copywriting content quality guidelines & required list of attributes.",
+    "write_article" : "WRITE ARTICLE -\n• Now write article complying with all previous steps including copywriting content quality guidelines & required list of attributes.\n• Please ensure article sound more human, conversational, and less formal. Use simpler language, introduce more narrative flow, and adjust the tone to feel more natural and relatable. Avoid overly academic phrasing and make the content sound more like a story being told to an interested reader, rather than a formal research paper.\n• Use proper markdown formatting with bold/italicised main-keywords, headings, sub-headings, etc.\n• Do not mention the framework or article type in the body of the article.\n• Don't add dividers just proper headings, sub-headings & linebreaks.\n• Output generated article in separate canvas / document."
+  },
   "article_types": [
     "Advanced Guide",
     "Algorithm Explanation",
@@ -57,64 +64,65 @@
     "What-Why-How",
     "Workflow-Based Explanation"
   ],
-  "content_writing_fields": {
-    "all": [
-      "Algorithm Design",
-      "Augmented Reality (AR)",
-      "Backend Development",
-      "Bioinformatics",
-      "Blockchain Development",
-      "Cloud Computing",
-      "Cloud Security",
-      "Computational Biology",
-      "Computer Graphics",
-      "Computer Vision",
-      "Containerization",
-      "Cybersecurity",
-      "Data Analytics",
-      "Data Engineering",
+  "content_writing_field" : "Computer Science & Programming",
+  "content_writing_subfields_groups": {
+    "_AI_ML_DATA": [
+      "Artificial Intelligence",
       "Data Science",
-      "Database Management",
-      "Deep Learning",
-      "DevOps",
-      "Distributed Systems",
-      "Edge Computing",
-      "Embedded Systems",
-      "Ethical Hacking",
-      "Forensic Computing",
-      "Frontend Development",
-      "Full Stack Development",
-      "Game Development",
-      "High-Performance Computing",
-      "Internet of Things (IoT)",
-      "Machine Learning",
-      "MLOps",
-      "Mobile App Development",
-      "Natural Language Processing",
-      "Networking",
-      "Operating Systems",
-      "Parallel Computing",
-      "Quantum Computing",
-      "Reinforcement Learning",
-      "Robotics",
-      "Software Engineering",
-      "Software Testing",
-      "Virtual Reality (VR)",
-      "Virtualization"
+      "Data Engineering",
+      "Data Analytics",
+      "Machine Learning"
     ],
-    "groups": {
-      "ai_ml_data": [
-        "Artificial Intelligence",
-        "Data Science",
-        "Data Engineering",
-        "Data Analytics",
-        "Machine Learning"
-      ],
-      "web_development": [
-        "Backend Development",
-        "Frontend Development",
-        "Full Stack Development"
-      ]
-    }
-  }
+    "_Web_Development": [
+      "Backend Development",
+      "Frontend Development",
+      "Full Stack Development"
+    ]
+  },
+  "content_writing_subfields": [
+    "_AI_ML_DATA",
+    "_Web_Development",
+    "Algorithm Design",
+    "Augmented Reality (AR)",
+    "Backend Development",
+    "Bioinformatics",
+    "Blockchain Development",
+    "Cloud Computing",
+    "Cloud Security",
+    "Computational Biology",
+    "Computer Graphics",
+    "Computer Vision",
+    "Containerization",
+    "Cybersecurity",
+    "Data Analytics",
+    "Data Engineering",
+    "Data Science",
+    "Database Management",
+    "Deep Learning",
+    "DevOps",
+    "Distributed Systems",
+    "Edge Computing",
+    "Embedded Systems",
+    "Ethical Hacking",
+    "Forensic Computing",
+    "Frontend Development",
+    "Full Stack Development",
+    "Game Development",
+    "High-Performance Computing",
+    "Internet of Things (IoT)",
+    "Machine Learning",
+    "MLOps",
+    "Mobile App Development",
+    "Natural Language Processing",
+    "Networking",
+    "Operating Systems",
+    "Parallel Computing",
+    "Quantum Computing",
+    "Reinforcement Learning",
+    "Robotics",
+    "Software Engineering",
+    "Software Testing",
+    "Virtual Reality (VR)",
+    "Virtualization"
+  ]
 }
