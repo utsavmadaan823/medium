@@ -55,62 +55,50 @@ content_writing_frameworks:
   - What-Why-How
   - Workflow-Based Explanation
 content_writing_field: Computer Science & Programming
-content_writing_subfields_groups:
-  _AI_ML_DATA:
-    - Artificial Intelligence
+content_writing_groups:
+  Software Development:
+    - Frontend Development
+    - Backend Development
+    - Full Stack Development
+    - Mobile App Development
+    - Software Engineering
+    - Software Testing
+  Data Science & Machine Learning:
+    - Machine Learning
+    - Deep Learning
+    - Natural Language Processing
+    - Computer Vision
+    - Reinforcement Learning
     - Data Science
     - Data Engineering
     - Data Analytics
-    - Machine Learning
-  _Web_Development:
-    - Backend Development
-    - Frontend Development
-    - Full Stack Development
-content_writing_subfields:
-  - _AI_ML_DATA
-  - _Web_Development
-  - Algorithm Design
-  - Augmented Reality (AR)
-  - Backend Development
-  - Bioinformatics
-  - Blockchain Development
-  - Cloud Computing
-  - Cloud Security
-  - Computational Biology
-  - Computer Graphics
-  - Computer Vision
-  - Containerization
-  - Cybersecurity
-  - Data Analytics
-  - Data Engineering
-  - Data Science
-  - Database Management
-  - Deep Learning
-  - DevOps
-  - Distributed Systems
-  - Edge Computing
-  - Embedded Systems
-  - Ethical Hacking
-  - Forensic Computing
-  - Frontend Development
-  - Full Stack Development
-  - Game Development
-  - High-Performance Computing
-  - Internet of Things (IoT)
-  - Machine Learning
-  - MLOps
-  - Mobile App Development
-  - Natural Language Processing
-  - Networking
-  - Operating Systems
-  - Parallel Computing
-  - Quantum Computing
-  - Reinforcement Learning
-  - Robotics
-  - Software Engineering
-  - Software Testing
-  - Virtual Reality (VR)
-  - Virtualization
+    - Algorithm Design
+  Networking & Cloud:
+    - Networking
+    - Cybersecurity
+    - Ethical Hacking
+    - Forensic Computing
+    - Cloud Computing
+    - Cloud Security
+    - DevOps
+    - MLOps
+    - Internet of Things (IoT)
+    - Embedded Systems
+    - Edge Computing
+  Core Computer Science:
+    - Operating Systems
+    - Distributed Systems
+    - Parallel Computing
+    - High-Performance Computing
+    - Quantum Computing
+    - Virtualization
+    - Containerization
+    - Database Management
+    - Robotics
+    - Game Development
+    - Augmented Reality (AR)
+    - Virtual Reality (VR)
+    - Computer Graphics
 prompts:
   decide_suitable_content_writing_framework_with_type_topic: |
     DECIDE SUITABLE CONTENT WRITING FRAMEWORK : Choose 1 from most suitable
@@ -170,4 +158,3 @@ prompts:
     • Don't add dividers just proper headings, sub-headings & linebreaks.
 
     • Output generated article in separate canvas / document.
-
