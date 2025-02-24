@@ -55,7 +55,7 @@ content_writing_frameworks:
   - What-Why-How
   - Workflow-Based Explanation
 content_writing_field: Computer Science & Programming
-content_writing_groups:
+content_writing_subfield_groups:
   Software Development:
     - Frontend Development
     - Backend Development
@@ -100,61 +100,62 @@ content_writing_groups:
     - Virtual Reality (VR)
     - Computer Graphics
 prompts:
-  decide_suitable_content_writing_framework_with_type_topic: |
-    DECIDE SUITABLE CONTENT WRITING FRAMEWORK : Choose 1 from most suitable
-    below mentioned content writing frameworks & model according to the decided
-    article type ({type}), decided content writing field ({field}), decided
-    content writing sub-field ({subfield}) & article topic ({topic}) :
+  role: |-
+    You are a very experienced Writer specialized in {field} topics, experienced in creating comprehensive, engaging and SEO-friendly content for platforms like Medium.com.
+  decide_suitable_article_type: |-
+    DECIDE SUITABLE ARTICLE TYPE :
+    Choose 1 from most suitable below mentioned Article Types according to the decided Article Topic :
+    {types}
+  decide_suitable_content_writing_framework: |-
+    DECIDE SUITABLE CONTENT-WRITING FRAMEWORK :
+    Choose 1 from most suitable below mentioned Content Writing Frameworks & Models according to the decided article parameters including Article Type & Article Topic:
     {frameworks}
-  decide_suitable_content_writing_framework_with_type: |
-    DECIDE SUITABLE CONTENT WRITING FRAMEWORK : Choose 1 from most suitable
-    below mentioned content writing frameworks & model according to the decided
-    article type ({type}), decided content writing field ({field}) & decided
-    content writing sub-field ({subfield}) :
-    {frameworks}
-  writing_instructions: |
-    UNDERSTAND COPYWRITING CONTENT QUALITY GUIDELINES & REQUIRED ATTRIBUTES :
-
-    • Comprehensively prepare list of required attributes that a good
-    copywriting content should possess & copywriting content quality guidelines
-    that a good copywriting content should follow.
-
-    • Need to use above copywriting content quality guidelines & list of
-    required attributes to generate compliant article & topic in following
-    steps.
-
-    • Output above copywriting content quality guidelines & required list of
-    attributes in separate canvas / document.
-  decide_article_topic: |
+  decide_article_topic: |-
     DECIDE ARTICLE TOPIC :
+    • Research current trends & developments including sub-fields in {subfield} ({field} - {group}) field for {type} Article Type, that are currently relevant and interesting.
+    • Now generate 1 specific Article Topic based on Above Research for {type} Article Type that adheres to the decided Content Writing Framework.
+  writing_instructions: |-
+    UNDERSTAND COPYWRITING CONTENT QUALITY GUIDELINES & REQUIRED ATTRIBUTES :
+    • Comprehensively prepare a list of required attributes that a good copywriting content should possess & copywriting content quality guidelines that a good copywriting content should follow, specially for the decided article parameters including Article Type, Content Field & Article Topic.
+    • Need to use above copywriting content quality guidelines & list of required attributes to write fully compliant article and accompanying title & description for article in following steps.
+    • Output above copywriting content quality guidelines & required list of attributes in separate canvas / document.
+  write_article: |-
+    WRITE ARTICLE FOLLOWING THE BELOW GUIDELINES :
+    • Now write an article with accompanying title & max 140-words description according to Decided Article Parameters including Article Type & Framework complying with all previous steps including copywriting content quality guidelines & required list of attributes.
+    • Title & Description should be catchy, appealing, captivating and clear. They should grab the attention of readers and make them curious to read more. Avoid time-specific framing unless essential. Overall, they should be designed to perform well on the Medium platform.
+    • Strictly ensure content sounds more human, conversational and less formal, tailored to the decided Article Type & Framework. Use simpler language, introduce more narrative flow, and adjust the tone to feel more natural and relatable. Avoid overly academic phrasing and make the content sound more like a story being told to an interested reader, rather than a formal research paper. May use emojis and informal phrases occasionally (if relevant) to keep it light.
+    
+    > STRUCTURE -
+    • Include an introductory paragraph that hooks the reader, previews the content, reflects the Article Type and is not too long.
+    • Use clear, descriptive headings that align with the decided framework, reinforce the topic, and improve readability / SEO.
 
-    • Research current trends and developments in {subfield} ({field}) field,
-    focusing on recent advancements and near-future potential.
+    > FLOW -
+    • Follow the decided Content Writing Framework to organize the content and ensure logical flow.
+    • Ensure smooth transitions between sections, maintaining coherence within the decided framework.
+    
+    > CONTENT -
+    • Use approachable language to explain technical concepts within, balancing depth and accessibility while maintaining credibility.
+    • Include practical relatable real-world examples, analogies, tables or code snippets (if relevant) that tie back to the Article Type, Content Field & Framework.
 
-    • Identify as many distinct sub-fields within {subfield} ({field}) field
-    field that are currently relevant and interesting.
-
-    • Now generate 1 specific article idea under any sub-fields decided above
-    considering current trends & developments & also comply with all previous
-    steps including copywriting content quality guidelines & required list of
-    attributes.
-  write_article: |
-    WRITE ARTICLE -
-
-    • Now write article complying with all previous steps including copywriting
-    content quality guidelines & required list of attributes.
-
-    • Please ensure article sound more human, conversational, and less formal.
-    Use simpler language, introduce more narrative flow, and adjust the tone to
-    feel more natural and relatable. Avoid overly academic phrasing and make the
-    content sound more like a story being told to an interested reader, rather
-    than a formal research paper.
-
-    • Use proper markdown formatting with bold/italicised main-keywords,
-    headings, sub-headings, etc.
-
-    • Do not mention the framework or article type in the body of the article.
-
-    • Don't add dividers just proper headings, sub-headings & linebreaks.
-
+    > ENDING -
+    • End the article with a concise (not more than 1-2 lines) strong call to action (CTA):
+    • Examples: Invite readers to share their thoughts in the comments, pose a thought-provoking question tied to the field, or encourage them to share the post with others.
+    • Ensure the CTA is engaging, relevant to the Article Type, and complements the framework's conclusion.
+    
+    > SEO -
+    • Please ensure content is highly SEO Optimized.
+    • Optimize for SEO by naturally weaving in relevant keywords related to the field and the sub-area.
+    
+    > DON'TS -
+    • Do not mention the framework, framework sections or article type in the body, headings & subheadings of the article.
+    • Don't mention words or character lengths anywhere.
+    • Don't use dividers in Content.
+    • Don't put empty newlines in Codeblocks.
+    • Don't use placeholders for images, urls or anything. Use actual working links if needed otherwise don't use them. Generated content should be final that doesn't require any editing.
+    • Don't drag the last section (wrapping up, conclusion etc) too far.
+    
+    > FORMATTING -
+    • Mention the coding language name next to the backticks in codeblocks. Example: ```python instead of simply ```
+    • Output generated article in Markdown Block with proper Markdown Formatting with bold/italicised main-keywords, headings, sub-headings, line breaks, etc.
     • Output generated article in separate canvas / document.
+    • The final article must be ready to publish on Medium.
