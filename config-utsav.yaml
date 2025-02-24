@@ -1,1 +1,173 @@
+article_types:
+  - Advanced Guide
+  - Algorithm Explanation
+  - API Documentation
+  - Architecture Review
+  - Beginner's Guide
+  - Best Practices
+  - Case Study
+  - Code Refactoring Guide
+  - Code Walkthrough
+  - Comparison
+  - Debugging Guide
+  - Deep Dive
+  - Design Patterns
+  - Explainer
+  - Failure Analysis
+  - Feature Breakdown
+  - Framework Comparison
+  - How-To Guide
+  - Industry Trends
+  - Infrastructure Setup Guide
+  - Interview with Experts
+  - Listicle
+  - Open Source Project Overview
+  - Opinion Piece
+  - Performance Benchmark
+  - Scalability & Optimization Guide
+  - Security Analysis
+  - Step-by-Step Tutorial
+  - Technology Overview
+  - Troubleshooting Guide
+  - Whitepaper
+content_writing_frameworks:
+  - AIDA (Attention-Interest-Desire-Action)
+  - BAB (Before-After-Bridge)
+  - Benchmarking & Metrics-Driven Analysis
+  - Best Practices vs. Anti-Patterns
+  - Code-Snippet-Explanation
+  - Common Mistakes & Fixes
+  - Comparison Matrix
+  - Concept-Use Case-Code Example
+  - FAB (Features-Advantages-Benefits)
+  - FAQ-Based Writing
+  - Issue-Symptom-Diagnosis-Solution
+  - 'MECE (Mutually Exclusive, Collectively Exhaustive)'
+  - PAS (Problem-Agitate-Solution)
+  - Point-Example-Explanation (PEE)
+  - Problem-Solution-Implementation
+  - SCQA (Situation-Complication-Question-Answer)
+  - STAR (Situation-Task-Action-Result)
+  - Step-by-Step Breakdown
+  - 'The 5W1H (Who, What, When, Where, Why, How)'
+  - The Inverted Pyramid
+  - The Pyramid Principle
+  - What-Why-How
+  - Workflow-Based Explanation
+content_writing_field: Computer Science & Programming
+content_writing_subfields_groups:
+  _AI_ML_DATA:
+    - Artificial Intelligence
+    - Data Science
+    - Data Engineering
+    - Data Analytics
+    - Machine Learning
+  _Web_Development:
+    - Backend Development
+    - Frontend Development
+    - Full Stack Development
+content_writing_subfields:
+  - _AI_ML_DATA
+  - _Web_Development
+  - Algorithm Design
+  - Augmented Reality (AR)
+  - Backend Development
+  - Bioinformatics
+  - Blockchain Development
+  - Cloud Computing
+  - Cloud Security
+  - Computational Biology
+  - Computer Graphics
+  - Computer Vision
+  - Containerization
+  - Cybersecurity
+  - Data Analytics
+  - Data Engineering
+  - Data Science
+  - Database Management
+  - Deep Learning
+  - DevOps
+  - Distributed Systems
+  - Edge Computing
+  - Embedded Systems
+  - Ethical Hacking
+  - Forensic Computing
+  - Frontend Development
+  - Full Stack Development
+  - Game Development
+  - High-Performance Computing
+  - Internet of Things (IoT)
+  - Machine Learning
+  - MLOps
+  - Mobile App Development
+  - Natural Language Processing
+  - Networking
+  - Operating Systems
+  - Parallel Computing
+  - Quantum Computing
+  - Reinforcement Learning
+  - Robotics
+  - Software Engineering
+  - Software Testing
+  - Virtual Reality (VR)
+  - Virtualization
+prompts:
+  decide_suitable_content_writing_framework_with_type_topic: |
+    DECIDE SUITABLE CONTENT WRITING FRAMEWORK : Choose 1 from most suitable
+    below mentioned content writing frameworks & model according to the decided
+    article type ({type}), decided content writing field ({field}), decided
+    content writing sub-field ({subfield}) & article topic ({topic}) :
+    {frameworks}
+  decide_suitable_content_writing_framework_with_type: |
+    DECIDE SUITABLE CONTENT WRITING FRAMEWORK : Choose 1 from most suitable
+    below mentioned content writing frameworks & model according to the decided
+    article type ({type}), decided content writing field ({field}) & decided
+    content writing sub-field ({subfield}) :
+    {frameworks}
+  writing_instructions: |
+    UNDERSTAND COPYWRITING CONTENT QUALITY GUIDELINES & REQUIRED ATTRIBUTES :
+
+    • Comprehensively prepare list of required attributes that a good
+    copywriting content should possess & copywriting content quality guidelines
+    that a good copywriting content should follow.
+
+    • Need to use above copywriting content quality guidelines & list of
+    required attributes to generate compliant article & topic in following
+    steps.
+
+    • Output above copywriting content quality guidelines & required list of
+    attributes in separate canvas / document.
+  decide_article_topic: |
+    DECIDE ARTICLE TOPIC :
+
+    • Research current trends and developments in {subfield} ({field}) field,
+    focusing on recent advancements and near-future potential.
+
+    • Identify as many distinct sub-fields within {subfield} ({field}) field
+    field that are currently relevant and interesting.
+
+    • Now generate 1 specific article idea under any sub-fields decided above
+    considering current trends & developments & also comply with all previous
+    steps including copywriting content quality guidelines & required list of
+    attributes.
+  write_article: |
+    WRITE ARTICLE -
+
+    • Now write article complying with all previous steps including copywriting
+    content quality guidelines & required list of attributes.
+
+    • Please ensure article sound more human, conversational, and less formal.
+    Use simpler language, introduce more narrative flow, and adjust the tone to
+    feel more natural and relatable. Avoid overly academic phrasing and make the
+    content sound more like a story being told to an interested reader, rather
+    than a formal research paper.
+
+    • Use proper markdown formatting with bold/italicised main-keywords,
+    headings, sub-headings, etc.
+
+    • Do not mention the framework or article type in the body of the article.
+
+    • Don't add dividers just proper headings, sub-headings & linebreaks.
+
+    • Output generated article in separate canvas / document.
 
