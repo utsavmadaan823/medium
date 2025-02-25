@@ -1,3 +1,65 @@
+prompts:
+  role: |-
+    You are a very experienced Writer specialized in {field_merged} topics, experienced in creating comprehensive, engaging and SEO-friendly content for platforms like Medium.com.
+  decide_suitable_article_type: |-
+    DECIDE SUITABLE ARTICLE TYPE :
+    Choose 1 from most suitable below mentioned Article Types according to the decided Article Topic :
+    {types}
+  decide_suitable_content_writing_framework: |-
+    DECIDE SUITABLE CONTENT-WRITING FRAMEWORK :
+    Choose 1 from most suitable below mentioned Content Writing Frameworks & Models according to the decided article parameters including Article Type & Article Topic:
+    {frameworks}
+  decide_article_topic: |-
+    DECIDE ARTICLE TOPIC :
+    • Research current trends & developments including sub-fields in {subfield} ({group} - {field}) for {type} Article Type, that are currently relevant and interesting.
+    • Now generate 1 specific Article Topic based on Above Research for {type} Article Type that adheres to the decided Content Writing Framework.
+  writing_instructions: |-
+    UNDERSTAND COPYWRITING CONTENT QUALITY GUIDELINES & REQUIRED ATTRIBUTES :
+    • Comprehensively prepare a list of required attributes that a good copywriting content should possess & copywriting content quality guidelines that a good copywriting content should follow, specially for the decided article parameters including Article Type, Content Field & Article Topic.
+    • Need to use above copywriting content quality guidelines & list of required attributes to write fully compliant article and accompanying title & description for article in following steps.
+    • Strictly output above copywriting content quality guidelines & required list of attributes in separate canvas / document.
+  write_article: |-
+    WRITE ARTICLE FOLLOWING THE BELOW GUIDELINES :
+    • Now write an article with accompanying title & max 140-words description according to Decided Article Parameters including Article Type & Framework complying with all previous steps including copywriting content quality guidelines & required list of attributes.
+    • Title & Description should be catchy, appealing, captivating and clear. They should grab the attention of readers and make them curious to read more. Avoid time-specific framing unless essential. Overall, they should be designed to perform well on the Medium platform.
+    
+    > STRUCTURE -
+    • Include an introductory paragraph that hooks the reader, previews the content, reflects the Article Type and is not too long.
+    • Use clear, descriptive headings that align with the decided framework, reinforce the topic, and improve readability / SEO.
+
+    > FLOW -
+    • Follow the decided Content Writing Framework to organize the content and ensure logical flow.
+    • Ensure smooth transitions between sections, maintaining coherence within the decided framework.
+    
+    > CONTENT -
+    • Use approachable language to explain technical concepts within, balancing depth and accessibility while maintaining credibility.
+    • Include practical relatable real-world examples, analogies, tables or code snippets (if relevant) that tie back to the Article Type, Content Field & Framework.
+
+    > ENDING -
+    • End the article with a concise (not more than 1-2 lines) strong call to action (CTA):
+    • Examples: Invite readers to share their thoughts in the comments, pose a thought-provoking question tied to the field, or encourage them to share the post with others.
+    • Ensure the CTA is engaging, relevant to the Article Type, and complements the framework's conclusion.
+    
+    > SEO -
+    • Please ensure content is highly SEO Optimized.
+    • Optimize for SEO by naturally weaving in relevant keywords related to the field and the sub-area.
+    
+    > DON'TS -
+    • Do not mention the framework, framework sections or article type in the body, headings & subheadings of the article.
+    • Don't mention words or character lengths anywhere.
+    • Don't use dividers in Content.
+    • Don't put empty newlines in Codeblocks.
+    • Don't use placeholders for images, urls or anything. Use actual working links if needed otherwise don't use them. Generated content should be final that doesn't require any editing.
+    • Don't drag the last section (wrapping up, conclusion etc) too far.
+    
+    > FORMATTING -
+    • Add emojis where they fit naturally—like in headings, subheadings, lists, steps, code-comments, etc to make it more engaging and visually clear. Also in CTA as well as anywhere else if its appropriate like to show emotions, etc.
+    • Mention the coding language name next to the backticks in codeblocks. Example: ```python instead of simply ```
+    • Output generated article in Markdown Block with proper Markdown Formatting with bold/italicised main-keywords, headings, sub-headings, line breaks, etc.
+    • Output generated article in separate canvas / document.
+    • The final article must be ready to publish on Medium.
+
+    NOTE : Strictly ensure content sounds more human, conversational and less formal, tailored to the decided Article Type & Framework. Use simpler language, introduce more narrative flow, and adjust the tone to feel more natural and relatable. Avoid overly academic phrasing and make the content sound more like a story being told to an interested reader, rather than a formal research paper. May use emojis and informal phrases occasionally (if relevant) to keep it light.
 article_types:
   - Advanced Guide
   - Algorithm Explanation
@@ -54,108 +116,1820 @@ content_writing_frameworks:
   - The Pyramid Principle
   - What-Why-How
   - Workflow-Based Explanation
-content_writing_field: Computer Science & Programming
+content_writing_field: Software Development
 content_writing_subfield_groups:
-  Software Development:
-    - Frontend Development
-    - Backend Development
-    - Full Stack Development
-    - Mobile App Development
-    - Software Engineering
-    - Software Testing
-  Data Science & Machine Learning:
-    - Machine Learning
-    - Deep Learning
-    - Natural Language Processing
-    - Computer Vision
-    - Reinforcement Learning
-    - Data Science
-    - Data Engineering
-    - Data Analytics
-    - Algorithm Design
-  Networking & Cloud:
-    - Networking
-    - Cybersecurity
-    - Ethical Hacking
-    - Forensic Computing
-    - Cloud Computing
-    - Cloud Security
-    - DevOps
-    - MLOps
-    - Internet of Things (IoT)
-    - Embedded Systems
-    - Edge Computing
-  Core Computer Science:
-    - Operating Systems
-    - Distributed Systems
-    - Parallel Computing
-    - High-Performance Computing
-    - Quantum Computing
-    - Virtualization
-    - Containerization
-    - Database Management
-    - Robotics
-    - Game Development
-    - Augmented Reality (AR)
-    - Virtual Reality (VR)
-    - Computer Graphics
-prompts:
-  role: |-
-    You are a very experienced Writer specialized in {field} topics, experienced in creating comprehensive, engaging and SEO-friendly content for platforms like Medium.com.
-  decide_suitable_article_type: |-
-    DECIDE SUITABLE ARTICLE TYPE :
-    Choose 1 from most suitable below mentioned Article Types according to the decided Article Topic :
-    {types}
-  decide_suitable_content_writing_framework: |-
-    DECIDE SUITABLE CONTENT-WRITING FRAMEWORK :
-    Choose 1 from most suitable below mentioned Content Writing Frameworks & Models according to the decided article parameters including Article Type & Article Topic:
-    {frameworks}
-  decide_article_topic: |-
-    DECIDE ARTICLE TOPIC :
-    • Research current trends & developments including sub-fields in {subfield} ({field} - {group}) field for {type} Article Type, that are currently relevant and interesting.
-    • Now generate 1 specific Article Topic based on Above Research for {type} Article Type that adheres to the decided Content Writing Framework.
-  writing_instructions: |-
-    UNDERSTAND COPYWRITING CONTENT QUALITY GUIDELINES & REQUIRED ATTRIBUTES :
-    • Comprehensively prepare a list of required attributes that a good copywriting content should possess & copywriting content quality guidelines that a good copywriting content should follow, specially for the decided article parameters including Article Type, Content Field & Article Topic.
-    • Need to use above copywriting content quality guidelines & list of required attributes to write fully compliant article and accompanying title & description for article in following steps.
-    • Output above copywriting content quality guidelines & required list of attributes in separate canvas / document.
-  write_article: |-
-    WRITE ARTICLE FOLLOWING THE BELOW GUIDELINES :
-    • Now write an article with accompanying title & max 140-words description according to Decided Article Parameters including Article Type & Framework complying with all previous steps including copywriting content quality guidelines & required list of attributes.
-    • Title & Description should be catchy, appealing, captivating and clear. They should grab the attention of readers and make them curious to read more. Avoid time-specific framing unless essential. Overall, they should be designed to perform well on the Medium platform.
-    • Strictly ensure content sounds more human, conversational and less formal, tailored to the decided Article Type & Framework. Use simpler language, introduce more narrative flow, and adjust the tone to feel more natural and relatable. Avoid overly academic phrasing and make the content sound more like a story being told to an interested reader, rather than a formal research paper. May use emojis and informal phrases occasionally (if relevant) to keep it light.
-    
-    > STRUCTURE -
-    • Include an introductory paragraph that hooks the reader, previews the content, reflects the Article Type and is not too long.
-    • Use clear, descriptive headings that align with the decided framework, reinforce the topic, and improve readability / SEO.
-
-    > FLOW -
-    • Follow the decided Content Writing Framework to organize the content and ensure logical flow.
-    • Ensure smooth transitions between sections, maintaining coherence within the decided framework.
-    
-    > CONTENT -
-    • Use approachable language to explain technical concepts within, balancing depth and accessibility while maintaining credibility.
-    • Include practical relatable real-world examples, analogies, tables or code snippets (if relevant) that tie back to the Article Type, Content Field & Framework.
-
-    > ENDING -
-    • End the article with a concise (not more than 1-2 lines) strong call to action (CTA):
-    • Examples: Invite readers to share their thoughts in the comments, pose a thought-provoking question tied to the field, or encourage them to share the post with others.
-    • Ensure the CTA is engaging, relevant to the Article Type, and complements the framework's conclusion.
-    
-    > SEO -
-    • Please ensure content is highly SEO Optimized.
-    • Optimize for SEO by naturally weaving in relevant keywords related to the field and the sub-area.
-    
-    > DON'TS -
-    • Do not mention the framework, framework sections or article type in the body, headings & subheadings of the article.
-    • Don't mention words or character lengths anywhere.
-    • Don't use dividers in Content.
-    • Don't put empty newlines in Codeblocks.
-    • Don't use placeholders for images, urls or anything. Use actual working links if needed otherwise don't use them. Generated content should be final that doesn't require any editing.
-    • Don't drag the last section (wrapping up, conclusion etc) too far.
-    
-    > FORMATTING -
-    • Mention the coding language name next to the backticks in codeblocks. Example: ```python instead of simply ```
-    • Output generated article in Markdown Block with proper Markdown Formatting with bold/italicised main-keywords, headings, sub-headings, line breaks, etc.
-    • Output generated article in separate canvas / document.
-    • The final article must be ready to publish on Medium.
+  Programming Languages:
+    Object Oriented:
+      - Java
+      - C#
+      - C++
+      - Python
+      - Ruby
+      - Swift
+      - Kotlin
+      - TypeScript
+      - Dart
+      - Rust
+      - Scala
+      - Groovy
+      - R
+      - Lua
+      - Perl
+      - PHP
+      - JavaScript
+      - CoffeeScript
+      - WebAssembly
+    Non-Object Oriented:
+      - C
+      - Objective-C
+      - Assembly
+      - Fortran
+      - Pascal
+      - COBOL
+      - Lua
+      - Perl
+      - PHP
+      - JavaScript
+      - CoffeeScript
+      - WebAssembly
+  Web Development:
+    Frontend Development:
+      HTML:
+        - HTML5
+        - Semantic Elements
+        - Forms
+        - Tables
+        - Lists
+        - Images
+        - Links
+        - Media
+        - Embedding
+        - Scripting
+        - APIs
+      CSS:
+        - CSS3
+        - SASS
+        - LESS
+        - Stylus
+      JavaScript:
+        - ES6
+        - TypeScript
+        - CoffeeScript
+        - Elm
+        - ReasonML
+        - ClojureScript
+        - WebAssembly
+      Frameworks:
+        - React.js
+        - Angular
+        - Vue.js
+        - Svelte
+        - Ember.js
+        - Backbone.js
+        - Polymer
+        - Preact
+        - Alpine.js
+        - Stimulus
+        - Meteor
+        - Next.js
+        - Nuxt.js
+        - Gatsby
+        - Gridsome
+        - Sapper
+        - Remix
+        - Marko
+        - Mithril
+        - Riot.js
+        - Aurelia
+        - Stencil
+        - Quasar
+        - 11ty
+        - Astro
+        - Scully
+        - Docusaurus
+        - Hugo
+        - Jekyll
+        - Eleventy
+        - Gridsome
+        - Nuxt.js
+        - Gatsby
+        - Next.js
+        - Sapper
+        - SvelteKit
+        - VuePress
+        - AngularJS
+        - Backbone.js
+        - Ember.js
+        - Knockout.js
+        - Meteor
+        - Polymer
+        - Svelte
+        - Web Components
+        - Express.js
+        - Koa
+        - Hapi
+        - NestJS
+        - Fastify
+        - Sails.js
+        - LoopBack
+        - AdonisJS
+        - Feathers
+        - Strapi
+        - KeystoneJS
+        - Total.js
+        - Meteor
+        - Derby
+        - Mean.js
+        - Mern.js
+        - Next.js
+        - Nuxt.js
+        - Gatsby
+        - Gridsome
+        - Sapper
+        - SvelteKit
+        - VuePress
+        - AngularJS
+        - Backbone.js
+        - Ember.js
+        - Knockout.js
+        - Meteor
+        - Polymer
+        - Svelte
+        - Web Components
+        - Express.js
+        - Koa
+        - Hapi
+        - NestJS
+        - Fastify
+        - Sails.js
+        - LoopBack
+        - AdonisJS
+        - Feathers
+        - Strapi
+        - KeystoneJS
+        - Total.js
+        - Meteor
+        - Derby
+        - Mean.js
+        - Mern.js
+        - Next.js
+        - Nuxt.js
+        - Gatsby
+        - Gridsome
+        - Sapper
+        - SvelteKit
+        - VuePress
+    Backend Development:
+      - Node.js
+      - Express.js
+      - Django
+      - Flask
+      - Ruby on Rails
+      - Laravel
+      - Spring Boot
+      - ASP.NET
+      - Phoenix
+      - NestJS
+      - Fastify
+      - Sails.js
+      - Strapi
+      - KeystoneJS
+    Full Stack Development:
+      - MERN Stack
+      - MEAN Stack
+      - MEVN Stack
+      - LAMP Stack
+      - WAMP Stack
+      - JAMstack
+      - Serverless Stack
+      - PERN Stack
+      - RERN Stack
+      - ROME Stack
+      - RUM Stack
+      - RAMP Stack
+      - REMP Stack
+  App Development:
+    Mobile App Development:
+      IOS App Development:
+        - Swift
+        - Objective-C
+        - SwiftUI
+        - UIKit
+        - Combine
+        - Core Data
+        - Core ML
+        - ARKit
+        - WatchKit
+        - HealthKit
+        - MapKit
+        - SiriKit
+        - CloudKit
+        - In-App Purchases
+        - Push Notifications
+        - App Clips
+        - Widgets
+        - Extensions
+        - Accessibility
+        - Localization
+        - App Store Connect
+        - TestFlight
+      Android App Development:
+        - Java
+        - Kotlin
+        - Android SDK
+        - Android Studio
+        - Gradle
+        - Jetpack
+        - Material Design
+        - Architecture Components
+        - Data Binding
+        - Navigation
+        - WorkManager
+        - Paging
+        - LiveData
+        - ViewModel
+        - Room
+        - Firebase
+        - Google Play Services
+        - Google Play Console
+      Cross-Platform App Development:
+        - React Native
+        - Flutter
+        - Xamarin
+        - Ionic
+        - Cordova
+        - PhoneGap
+        - Appcelerator
+        - NativeScript
+        - Unity
+        - Qt
+        - JUCE
+        - Felgo
+        - Kivy
+        - Corona
+        - Cocos2d
+        - Godot
+        - LibGDX
+        - Moai
+        - Marmalade
+        - Haxe
+        - OpenFL
+    Desktop App Development:
+      Windows App Development:
+        - UWP
+        - WPF
+        - WinForms
+        - WinUI
+        - .NET
+        - C#
+        - XAML
+        - MVVM
+        - Prism
+        - Caliburn.Micro
+        - MahApps.Metro
+        - Material Design
+        - Fluent Design
+      Mac App Development:
+        - Cocoa
+        - Cocoa Touch
+        - Objective-C
+        - Swift
+        - SwiftUI
+        - AppKit
+        - UIKit
+        - Core Data
+        - Core ML
+        - ARKit
+        - WatchKit
+        - HealthKit
+        - MapKit
+        - SiriKit
+        - CloudKit
+        - In-App Purchases
+        - Push Notifications
+        - App Clips
+        - Widgets
+        - Extensions
+        - Accessibility
+        - Localization
+        - App Store Connect
+        - TestFlight
+      Linux App Development:
+        - GTK
+        - Qt
+        - wxWidgets
+        - FLTK
+        - X11
+        - Wayland
+        - SDL
+        - Allegro
+        - ClanLib
+        - SFML
+        - OpenSceneGraph
+        - Ogre3D
+        - Irrlicht
+        - Panda3D
+        - Godot
+        - Urho3D
+        - Armory3D
+        - CopperCube
+        - Torque3D
+        - Spring
+        - Crystal Space
+        - Delta3D
+        - Horde3D
+        - Polycode
+        - Panda3D
+        - Godot
+        - Urho3D
+        - Armory3D
+        - CopperCube
+        - Torque3D
+        - Spring
+        - Crystal Space
+        - Delta3D
+        - Horde3D
+        - Polycode
+        - Panda3D
+        - Godot
+        - Urho3D
+        - Armory3D
+        - CopperCube
+        - Torque3D
+        - Spring
+        - Crystal Space
+        - Delta3D
+        - Horde3D
+        - Polycode
+        - Panda3D
+        - Godot
+        - Urho3D
+        - Armory3D
+        - CopperCube
+        - Torque3D
+        - Spring
+        - Crystal Space
+        - Delta3D
+        - Horde3D
+        - Polycode
+        - Panda3D
+        - Godot
+        - Urho3D
+        - Armory3D
+        - CopperCube
+        - Torque3D
+        - Spring
+        - Crystal Space
+        - Delta3D
+        - Horde3D
+        - Polycode
+        - Panda3D
+        - Godot
+        - Urho3D
+        - Armory3D
+        - CopperCube
+        - Torque3D
+        - Spring
+        - Crystal Space
+        - Delta3D
+        - Horde3D
+        - Polycode
+        - Panda3D
+        - Godot
+        - Urho3D
+        - Armory3D
+        - CopperCube
+        - Torque3D
+        - Spring
+        - Crystal Space
+        - Delta3D
+        - Horde3D
+content_writing_subfield_groups_experimental:
+  Web Development:
+    Frontend:
+      HTML:
+        - Document Structure
+        - Semantic Elements
+        - Forms
+        - Tables
+        - Metadata
+        - Accessibility
+        - Media Elements
+      CSS:
+        - Selectors
+        - Box Model
+        - Flexbox
+        - Grid
+        - Animations
+        - Transitions
+        - Media Queries
+        - Variables
+        - Typography
+        - Responsive Design
+      Preprocessors:
+        SASS:
+          - Variables
+          - Nesting
+          - Mixins
+          - Extends
+          - Functions
+          - Control Directives
+        LESS:
+          - Variables
+          - Mixins
+          - Nested Rules
+          - Operations
+          - Functions
+      JavaScript:
+        Core Concepts:
+          - Variables
+          - Data Types
+          - Functions
+          - Objects
+          - Arrays
+          - Classes
+          - Promises
+          - Async/Await
+          - Event Loop
+          - Modules
+          - DOM Manipulation
+          - Error Handling
+        Frameworks:
+          React:
+            - Components
+            - Props
+            - State
+            - Hooks
+            - Context
+            - Redux
+            - Router
+            - Server Components
+            - Testing
+            - Performance Optimization
+          Angular:
+            - Components
+            - Services
+            - Directives
+            - Pipes
+            - Modules
+            - Dependency Injection
+            - RxJS
+            - Forms
+            - Routing
+            - Testing
+          Vue:
+            - Components
+            - Props
+            - Computed Properties
+            - Methods
+            - Directives
+            - Router
+            - Vuex
+            - Composition API
+            - Options API
+            - Custom Directives
+          Svelte:
+            - Components
+            - Reactivity
+            - Props
+            - Stores
+            - Animations
+            - Actions
+            - Events
+            - Lifecycle
+            - Transitions
+            - Context API
+        UI Libraries:
+          - Material UI
+          - Chakra UI
+          - Tailwind CSS
+          - Bootstrap
+          - Ant Design
+          - Styled Components
+          - Emotion
+          - Semantic UI
+        Build Tools:
+          Webpack:
+            - Loaders
+            - Plugins
+            - Code Splitting
+            - Hot Module Replacement
+            - Tree Shaking
+            - Configuration
+          Vite:
+            - Development Server
+            - Hot Module Replacement
+            - Plugin System
+            - Build Optimization
+            - ESM Support
+          Parcel:
+            - Zero Configuration
+            - Asset Bundling
+            - Development Server
+            - Code Splitting
+            - Tree Shaking
+        Testing:
+          Unit Testing:
+            - Jest
+            - Mocha
+            - Chai
+            - Jasmine
+          E2E Testing:
+            - Cypress
+            - Playwright
+            - Puppeteer
+            - Selenium
+          Component Testing:
+            - React Testing Library
+            - Vue Testing Library
+            - Enzyme
+            - Storybook
+      TypeScript:
+        - Types
+        - Interfaces
+        - Generics
+        - Enums
+        - Type Guards
+        - Decorators
+        - Namespaces
+        - Modules
+        - Utility Types
+        - Type Inference
+        - Declaration Files
+    Backend:
+      Node.js:
+        Core:
+          - Event Loop
+          - Modules
+          - File System
+          - Streams
+          - Buffers
+          - Child Processes
+          - Clusters
+          - HTTP/HTTPS
+          - Async Patterns
+        Frameworks:
+          Express:
+            - Routing
+            - Middleware
+            - Error Handling
+            - Template Engines
+            - Static Files
+            - REST APIs
+          NestJS:
+            - Modules
+            - Controllers
+            - Providers
+            - Decorators
+            - Pipes
+            - Guards
+            - Interceptors
+            - Middleware
+          Fastify:
+            - Routing
+            - Plugins
+            - Hooks
+            - Validation
+            - Serialization
+            - Error Handling
+          Hapi:
+            - Routing
+            - Plugins
+            - Authentication
+            - Validation
+            - Caching
+            - Error Handling
+        ORM/ODM:
+          - Mongoose
+          - Sequelize
+          - TypeORM
+          - Prisma
+          - Knex.js
+      Python:
+        Frameworks:
+          Django:
+            - ORM
+            - Admin Interface
+            - URL Routing
+            - Templates
+            - Forms
+            - Authentication
+            - Middleware
+            - Signals
+          Flask:
+            - Routing
+            - Templates
+            - Request Handling
+            - Blueprints
+            - Extensions
+            - Context Processors
+          FastAPI:
+            - Path Operations
+            - Query Parameters
+            - Request Body
+            - Dependency Injection
+            - Background Tasks
+            - WebSockets
+            - Security
+        ORM:
+          - SQLAlchemy
+          - Django ORM
+          - Peewee
+          - Pony ORM
+      Java:
+        Spring:
+          - Spring Boot
+          - Spring MVC
+          - Spring Data
+          - Spring Security
+          - Spring Cloud
+          - Spring Batch
+          - Dependency Injection
+          - AOP
+        Hibernate:
+          - Mapping
+          - Sessions
+          - Transactions
+          - HQL
+          - Criteria API
+          - Caching
+      PHP:
+        Frameworks:
+          Laravel:
+            - Routing
+            - Blade Templates
+            - Eloquent ORM
+            - Middleware
+            - Artisan CLI
+            - Authentication
+            - Authorization
+            - Testing
+          Symfony:
+            - Components
+            - Twig Templates
+            - Doctrine ORM
+            - Security
+            - Form Building
+            - Console Commands
+            - Event Dispatcher
+          CodeIgniter:
+            - MVC Architecture
+            - Libraries
+            - Helpers
+            - Database Tools
+            - Security Features
+            - Form Validation
+        CMS:
+          WordPress:
+            - Themes
+            - Plugins
+            - Hooks
+            - Custom Post Types
+            - REST API
+            - Gutenberg
+          Drupal:
+            - Content Types
+            - Views
+            - Modules
+            - Theming
+            - Configuration
+      Ruby:
+        Ruby on Rails:
+          - ActiveRecord
+          - Action Controller
+          - Action View
+          - Action Mailer
+          - Active Storage
+          - Active Job
+          - Asset Pipeline
+          - Testing
+      Go:
+        Topics:
+          - Goroutines
+          - Channels
+          - Interfaces
+          - Error Handling
+          - HTTP Server
+          - Testing
+        Frameworks:
+          - Gin
+          - Echo
+          - Fiber
+          - Buffalo
+      .NET:
+        ASP.NET Core:
+          - MVC
+          - Razor Pages
+          - Web API
+          - Blazor
+          - Identity
+          - Middleware
+          - Dependency Injection
+          - Entity Framework Core
+      REST API Design:
+        - Resources
+        - HTTP Methods
+        - Status Codes
+        - Authentication
+        - Authorization
+        - Versioning
+        - Documentation
+        - HATEOAS
+      GraphQL:
+        Topics:
+          - Schema
+          - Resolvers
+          - Queries
+          - Mutations
+          - Subscriptions
+          - Types
+          - Directives
+        Libraries:
+          - Apollo
+          - Relay
+          - Hasura
+          - Prisma
+      Authentication:
+        - OAuth 2.0
+        - JWT
+        - OpenID Connect
+        - SAML
+        - MFA
+        - SSO
+    Databases:
+      Relational:
+        MySQL:
+          - Tables
+          - Indexes
+          - Stored Procedures
+          - Triggers
+          - Transactions
+          - Normalization
+          - Query Optimization
+        PostgreSQL:
+          - Tables
+          - Indexes
+          - Functions
+          - Triggers
+          - JSON Support
+          - Extensions
+          - Transactions
+          - Advanced Data Types
+        SQLite:
+          - Tables
+          - Indexes
+          - Transactions
+          - Full-text Search
+          - Virtual Tables
+        SQL Server:
+          - Tables
+          - Stored Procedures
+          - Views
+          - Triggers
+          - Indexes
+          - Transactions
+          - Query Optimization
+        Oracle:
+          - Tables
+          - PL/SQL
+          - Indexes
+          - Partitioning
+          - Performance Tuning
+          - Security
+      NoSQL:
+        Document:
+          MongoDB:
+            - Collections
+            - Documents
+            - Indexes
+            - Aggregation
+            - Replication
+            - Sharding
+            - Transactions
+          CouchDB:
+            - Documents
+            - Views
+            - Replication
+            - MapReduce
+        Key-Value:
+          Redis:
+            - Data Structures
+            - Pub/Sub
+            - Transactions
+            - Lua Scripting
+            - Persistence
+            - Clustering
+          DynamoDB:
+            - Tables
+            - Items
+            - Indexes
+            - Partitioning
+            - Streams
+            - Transactions
+        Column-Family:
+          Cassandra:
+            - Column Families
+            - CQL
+            - Partitioning
+            - Consistency Levels
+            - Replication
+          HBase:
+            - Tables
+            - Row Keys
+            - Column Families
+            - Regions
+            - Compaction
+        Graph:
+          Neo4j:
+            - Nodes
+            - Relationships
+            - Cypher Query Language
+            - Indexes
+            - Transactions
+          ArangoDB:
+            - Collections
+            - Graphs
+            - AQL
+            - Indexes
+            - Transactions
+      Time Series:
+        - InfluxDB
+        - TimescaleDB
+        - Prometheus
+      Search Engines:
+        Elasticsearch:
+          - Indices
+          - Documents
+          - Mapping
+          - Querying
+          - Aggregations
+          - Analysis
+        Solr:
+          - Cores
+          - Documents
+          - Schemas
+          - Querying
+          - Faceting
+      Database Design:
+        - Normalization
+        - Indexing
+        - Query Optimization
+        - Transactions
+        - ACID Properties
+        - CAP Theorem
+        - Sharding
+        - Replication
+        - Connection Pooling
+    DevOps:
+      CI/CD:
+        - Jenkins
+        - GitHub Actions
+        - GitLab CI
+        - CircleCI
+        - Travis CI
+        - Azure DevOps
+        - TeamCity
+        - ArgoCD
+      Containerization:
+        Docker:
+          - Images
+          - Containers
+          - Volumes
+          - Networks
+          - Compose
+          - Swarm
+          - Dockerfile
+        Kubernetes:
+          - Pods
+          - Services
+          - Deployments
+          - StatefulSets
+          - ConfigMaps
+          - Secrets
+          - Volumes
+          - Namespaces
+          - Ingress
+          - RBAC
+      Infrastructure as Code:
+        Terraform:
+          - Providers
+          - Resources
+          - Modules
+          - State Management
+          - Variables
+          - Outputs
+        Ansible:
+          - Playbooks
+          - Roles
+          - Inventory
+          - Variables
+          - Modules
+          - Templates
+        CloudFormation:
+          - Templates
+          - Stacks
+          - Resources
+          - Parameters
+          - Outputs
+        Pulumi:
+          - Stacks
+          - Resources
+          - State Management
+          - Providers
+      Monitoring:
+        - Prometheus
+        - Grafana
+        - Datadog
+        - New Relic
+        - Nagios
+        - Zabbix
+        - ELK Stack
+      Logging:
+        - ELK Stack
+        - Fluentd
+        - Graylog
+        - Splunk
+        - Loki
+      Configuration Management:
+        - Ansible
+        - Chef
+        - Puppet
+        - Salt
+      Cloud Platforms:
+        AWS:
+          - EC2
+          - S3
+          - RDS
+          - Lambda
+          - DynamoDB
+          - API Gateway
+          - ECS
+          - EKS
+          - CloudFormation
+          - IAM
+          - CloudFront
+          - Route 53
+          - VPC
+          - SQS
+          - SNS
+        Azure:
+          - Virtual Machines
+          - Blob Storage
+          - SQL Database
+          - Functions
+          - App Service
+          - AKS
+          - CosmosDB
+          - API Management
+          - Active Directory
+          - Virtual Network
+          - Logic Apps
+          - Event Grid
+        Google Cloud:
+          - Compute Engine
+          - Cloud Storage
+          - Cloud SQL
+          - Cloud Functions
+          - App Engine
+          - GKE
+          - BigQuery
+          - Pub/Sub
+          - IAM
+          - Cloud Run
+          - Firestore
+        DigitalOcean:
+          - Droplets
+          - Spaces
+          - Kubernetes
+          - App Platform
+          - Managed Databases
+          - Load Balancers
+      Serverless:
+        - AWS Lambda
+        - Azure Functions
+        - Google Cloud Functions
+        - Cloudflare Workers
+        - Vercel Functions
+        - Netlify Functions
+      Security:
+        - Authentication
+        - Authorization
+        - Encryption
+        - Firewalls
+        - WAF
+        - VPN
+        - Vulnerability Scanning
+        - Penetration Testing
+        - Compliance
+  Mobile Development:
+    Native:
+      Android:
+        Core:
+          - Activities
+          - Fragments
+          - Services
+          - Broadcast Receivers
+          - Content Providers
+          - Intents
+          - Lifecycle
+          - UI Components
+          - Layouts
+        Languages:
+          - Kotlin
+          - Java
+        Libraries:
+          - Room
+          - LiveData
+          - ViewModel
+          - WorkManager
+          - Navigation
+          - DataBinding
+          - Retrofit
+          - OkHttp
+          - Glide
+          - Dagger/Hilt
+        Architecture:
+          - MVVM
+          - MVP
+          - MVI
+          - Clean Architecture
+      iOS:
+        Core:
+          - UIKit
+          - View Controllers
+          - Views
+          - Delegates
+          - Protocols
+          - Grand Central Dispatch
+          - Core Data
+          - SwiftUI
+        Languages:
+          - Swift
+          - Objective-C
+        Libraries:
+          - Combine
+          - CoreLocation
+          - CoreAnimation
+          - ARKit
+          - MapKit
+          - Alamofire
+          - Kingfisher
+          - RxSwift
+        Architecture:
+          - MVC
+          - MVVM
+          - Coordinator
+          - VIPER
+          - Clean Architecture
+    Cross-Platform:
+      React Native:
+        - Components
+        - Props
+        - State
+        - Hooks
+        - Navigation
+        - Native Modules
+        - Styling
+        - Animation
+        - Networking
+      Libraries:
+        - Redux
+        - React Navigation
+        - Async Storage
+        - React Native Gesture Handler
+        - Styled Components
+      Flutter:
+        Topics:
+          - Widgets
+          - State Management
+          - Dart
+          - Material Design
+          - Cupertino
+          - Navigation
+          - Animations
+          - Networking
+        Libraries:
+          - Provider
+          - Bloc/Cubit
+          - Riverpod
+          - GetX
+          - Dio
+      Xamarin:
+        - XAML
+        - C#
+        - Xamarin.Forms
+        - Platform-specific APIs
+        - MVVM
+        - Data Binding
+      Ionic:
+        - Angular/React/Vue Integration
+        - UI Components
+        - Capacitor/Cordova
+        - Native APIs
+        - Navigation
+        - Theme System
+    App Store Optimization:
+      - Keywords
+      - App Title
+      - Description
+      - Screenshots
+      - Ratings & Reviews
+      - App Icon
+      - App Size
+    Mobile Design:
+      - Material Design
+      - iOS Human Interface Guidelines
+      - Responsive Design
+      - Accessibility
+      - Dark Mode
+      - Gestures
+    Mobile Testing:
+      - Unit Testing
+      - UI Testing
+      - Performance Testing
+      - Device Compatibility
+      - Network Testing
+      - Security Testing
+    App Distribution:
+      - Google Play Store
+      - Apple App Store
+      - TestFlight
+      - Firebase App Distribution
+      - Enterprise Distribution
+  Desktop Development:
+    Electron:
+      - Main Process
+      - Renderer Process
+      - IPC
+      - Native APIs
+      - Packaging
+      - Distribution
+    Qt:
+      - Widgets
+      - QML
+      - Signals & Slots
+      - Event System
+      - Cross-platform APIs
+    WPF:
+      - XAML
+      - Data Binding
+      - Controls
+      - Styles
+      - Templates
+      - MVVM
+    JavaFX:
+      - FXML
+      - Scene Builder
+      - Controls
+      - CSS Styling
+      - Animation
+      - Event Handling
+    GTK:
+      - Widgets
+      - Containers
+      - Signals
+      - Styling
+      - GObject
+    Tauri:
+      - Web Frontend
+      - Rust Backend
+      - API System
+      - Security Model
+      - Packaging
+  Game Development:
+    Engines:
+      Unity:
+        - C# Scripting
+        - Components
+        - GameObjects
+        - Physics
+        - Animation
+        - UI System
+        - Rendering
+        - Asset Management
+        - Networking
+        - 2D/3D Support
+      Unreal Engine:
+        - Blueprints
+        - C++
+        - Materials
+        - Animation
+        - Landscapes
+        - Networking
+        - Rendering
+        - Physics
+        - AI
+      Godot:
+        - GDScript
+        - Nodes
+        - Scenes
+        - Physics
+        - Animation
+        - UI
+        - Shaders
+        - Networking
+        - 2D/3D Support
+    Graphics:
+      - OpenGL
+      - DirectX
+      - Vulkan
+      - Metal
+      - WebGL
+      - Shaders
+      - Texturing
+      - Lighting
+      - Rendering Pipelines
+    Physics:
+      - Collision Detection
+      - Rigid Body Dynamics
+      - Soft Body Physics
+      - Particle Systems
+      - Fluid Simulation
+    Game AI:
+      - Pathfinding
+      - Decision Making
+      - Behavior Trees
+      - State Machines
+      - Machine Learning
+    Audio:
+      - Sound Design
+      - Spatial Audio
+      - Music Systems
+      - Audio Middleware
+      - Voice Acting
+    Networking:
+      - Client-Server
+      - P2P
+      - State Synchronization
+      - Prediction
+      - Lag Compensation
+    Monetization:
+      - In-App Purchases
+      - Ads
+      - Premium
+      - Subscription
+      - Free-to-Play
+  Data Science:
+    Languages:
+      Python:
+        - NumPy
+        - Pandas
+        - SciPy
+        - Matplotlib
+        - Seaborn
+        - Scikit-learn
+        - TensorFlow
+        - PyTorch
+        - Keras
+      R:
+        - Tidyverse
+        - ggplot2
+        - dplyr
+        - caret
+        - shiny
+      SQL:
+        - Queries
+        - Joins
+        - Aggregations
+        - Window Functions
+    Machine Learning:
+      Supervised Learning:
+        - Linear Regression
+        - Logistic Regression
+        - Decision Trees
+        - Random Forest
+        - SVM
+        - Neural Networks
+        - KNN
+        - Naive Bayes
+        - Gradient Boosting
+      Unsupervised Learning:
+        - Clustering
+        - Dimensionality Reduction
+        - Association Rules
+        - Anomaly Detection
+      Deep Learning:
+        - Neural Networks
+        - CNN
+        - RNN/LSTM/GRU
+        - Transformers
+        - GANs
+        - Autoencoders
+        - Transfer Learning
+        - Fine-tuning
+    Data Visualization:
+      Topics:
+        - Charts
+        - Dashboards
+        - Interactive Visualizations
+        - Geographical Mapping
+      Tools:
+        - Tableau
+        - Power BI
+        - D3.js
+        - Plotly
+        - Matplotlib
+        - Seaborn
+    Big Data:
+      - Hadoop
+      - Spark
+      - Hive
+      - Kafka
+      - Airflow
+      - Databricks
+      - Data Lakes
+      - Data Warehouses
+    Natural Language Processing:
+      - Text Preprocessing
+      - Tokenization
+      - Word Embeddings
+      - Sentiment Analysis
+      - Named Entity Recognition
+      - Topic Modeling
+      - Text Generation
+      - Machine Translation
+    Computer Vision:
+      - Image Classification
+      - Object Detection
+      - Image Segmentation
+      - Face Recognition
+      - Pose Estimation
+      - OCR
+      - Video Analysis
+  Artificial Intelligence:
+    Machine Learning:
+      - Regression
+      - Classification
+      - Clustering
+      - Dimensionality Reduction
+      - Reinforcement Learning
+      - Neural Networks
+      - Feature Engineering
+      - Model Evaluation
+    Deep Learning:
+      - Neural Network Architectures
+      - Convolutional Neural Networks
+      - Recurrent Neural Networks
+      - Transformers
+      - GANs
+      - Autoencoders
+      - Transfer Learning
+      - Fine-tuning
+    Large Language Models:
+      Topics:
+        - Transformer Architecture
+        - Attention Mechanisms
+        - Prompt Engineering
+        - Fine-tuning
+        - Embeddings
+        - Chain-of-Thought
+        - RAG (Retrieval Augmented Generation)
+      Models:
+        - GPT
+        - BERT
+        - LLaMA
+        - Claude
+        - Mistral
+        - PaLM
+    Computer Vision:
+      - Image Classification
+      - Object Detection
+      - Segmentation
+      - Facial Recognition
+      - Pose Estimation
+      - Optical Character Recognition
+      - Video Analysis
+    Natural Language Processing:
+      - Text Classification
+      - Named Entity Recognition
+      - Sentiment Analysis
+      - Topic Modeling
+      - Machine Translation
+      - Question Answering
+      - Text Generation
+      - Text Summarization
+    Ethics and Responsible AI:
+      - Bias Detection
+      - Fairness
+      - Transparency
+      - Accountability
+      - Privacy
+      - Explainability
+      - Safety
+    AI Infrastructure:
+      - GPU/TPU Computing
+      - Distributed Training
+      - Model Serving
+      - MLOps
+      - Vector Databases
+      - Model Monitoring
+  Quality Assurance:
+    Types:
+      - Unit Testing
+      - Integration Testing
+      - System Testing
+      - Acceptance Testing
+      - Regression Testing
+      - Performance Testing
+      - Security Testing
+      - Usability Testing
+      - Compatibility Testing
+      - Accessibility Testing
+    Methodologies:
+      - Test-Driven Development
+      - Behavior-Driven Development
+      - Continuous Testing
+      - Shift-Left Testing
+      - Risk-Based Testing
+      - Exploratory Testing
+    Automation:
+      Unit Testing:
+        - JUnit
+        - PyTest
+        - NUnit
+        - Jest
+        - Mocha
+        - Jasmine
+      UI Testing:
+        - Selenium
+        - Cypress
+        - Playwright
+        - Puppeteer
+        - Appium
+        - TestCafe
+      API Testing:
+        - Postman
+        - RestAssured
+        - Karate
+        - Pact
+      Performance Testing:
+        - JMeter
+        - Gatling
+        - Locust
+        - K6
+      Security Testing:
+        - OWASP ZAP
+        - Burp Suite
+        - SonarQube
+    Test Management:
+      - TestRail
+      - Zephyr
+      - qTest
+      - Xray
+      - Azure Test Plans
+  System Design:
+    Architecture Patterns:
+      - Monolithic
+      - Microservices
+      - Serverless
+      - Event-Driven
+      - Layered
+      - Hexagonal
+      - CQRS
+      - Event Sourcing
+      - Domain-Driven Design
+    Design Patterns:
+      Creational:
+        - Singleton
+        - Factory Method
+        - Abstract Factory
+        - Builder
+        - Prototype
+      Structural:
+        - Adapter
+        - Bridge
+        - Composite
+        - Decorator
+        - Facade
+        - Proxy
+        - Flyweight
+      Behavioral:
+        - Observer
+        - Strategy
+        - Command
+        - Template Method
+        - Iterator
+        - State
+        - Visitor
+        - Mediator
+        - Chain of Responsibility
+    Scalability:
+      - Horizontal Scaling
+      - Vertical Scaling
+      - Load Balancing
+      - Caching
+      - Database Sharding
+      - Connection Pooling
+      - Content Delivery Networks
+    Reliability:
+      - Fault Tolerance
+      - High Availability
+      - Disaster Recovery
+      - Backup Strategies
+      - Circuit Breakers
+      - Retries
+      - Rate Limiting
+    Performance:
+      - Caching
+      - Indexing
+      - Asynchronous Processing
+      - Connection Pooling
+      - Lazy Loading
+      - Resource Optimization
+      - Database Tuning
+  Programming Paradigms:
+    Object-Oriented Programming:
+      - Classes
+      - Objects
+      - Inheritance
+      - Polymorphism
+      - Encapsulation
+      - Abstraction
+    Functional Programming:
+      - Pure Functions
+      - Immutability
+      - First-Class Functions
+      - Higher-Order Functions
+      - Recursion
+      - Function Composition
+      - Referential Transparency
+    Procedural Programming:
+      - Procedures
+      - Variables
+      - Control Flow
+      - Modularity
+    Declarative Programming:
+      - SQL
+      - Regular Expressions
+      - HTML/CSS
+      - Configuration Languages
+    Reactive Programming:
+      - Observables
+      - Streams
+      - Event Handling
+      - Backpressure
+      - Error Handling
+    Concurrent Programming:
+      - Threads
+      - Locks
+      - Semaphores
+      - Atomic Operations
+      - Message Passing
+      - Actors
+      - Coroutines
+  Software Development Methodologies:
+    Agile:
+      Scrum:
+        - Sprints
+        - Daily Stand-ups
+        - Sprint Planning
+        - Sprint Review
+        - Sprint Retrospective
+        - Product Backlog
+        - User Stories
+      Kanban:
+        - Visualization
+        - WIP Limits
+        - Flow Management
+        - Explicit Policies
+        - Feedback Loops
+      Extreme Programming:
+        - Pair Programming
+        - Test-Driven Development
+        - Continuous Integration
+        - Small Releases
+        - Simple Design
+        - Refactoring
+    DevOps:
+      - Continuous Integration
+      - Continuous Delivery
+      - Continuous Deployment
+      - Infrastructure as Code
+      - Monitoring
+      - Logging
+      - Automated Testing
+    Waterfall:
+      - Requirements
+      - Design
+      - Implementation
+      - Verification
+      - Maintenance
+    Lean:
+      - Value Stream Mapping
+      - Pull Systems
+      - Continuous Improvement
+      - Waste Reduction
+      - Just-in-Time
+    Project Management:
+      - JIRA
+      - Trello
+      - Asana
+      - Monday.com
+      - Azure DevOps
+      - GitHub Projects
+  IoT Development:
+    Hardware:
+      - Arduino
+      - Raspberry Pi
+      - ESP32/ESP8266
+      - Sensors
+      - Actuators
+      - Communication Modules
+    Protocols:
+      - MQTT
+      - CoAP
+      - HTTP/REST
+      - WebSockets
+      - Bluetooth LE
+      - Zigbee
+      - Z-Wave
+      - LoRaWAN
+    Platforms:
+      - AWS IoT
+      - Azure IoT
+      - Google Cloud IoT
+      - ThingsBoard
+      - Home Assistant
+      - Particle
+      - NodeRed
+    Edge Computing:
+      - Local Processing
+      - Edge Analytics
+      - Edge AI
+      - Gateway Devices
+    Security:
+      - Device Authentication
+      - Data Encryption
+      - Secure Boot
+      - OTA Updates
+      - Access Control
+  Blockchain Development:
+    Platforms:
+      Ethereum:
+        - Solidity
+        - EVM
+        - Smart Contracts
+        - Web3.js
+        - Ethers.js
+        - Truffle
+        - Hardhat
+      Solana:
+        - Rust
+        - Programs
+        - SPL Tokens
+        - Anchor
+      Polkadot:
+        - Substrate
+        - Parachains
+        - WASM
+        - Ink
+      Hyperledger:
+        - Fabric
+        - Chaincode
+        - Channels
+        - Consensus
+    NFTs:
+      - ERC-721
+      - ERC-1155
+      - Metadata
+      - Marketplaces
+      - Royalties
+    DeFi:
+      - Decentralized Exchanges
+      - Lending Protocols
+      - Yield Farming
+      - Liquidity Pools
+      - Stablecoins
+      - Oracles
+    Smart Contracts:
+      - Development
+      - Testing
+      - Security
+      - Auditing
+      - Gas Optimization
+      - Upgradability
+    Consensus Mechanisms:
+      - Proof of Work
+      - Proof of Stake
+      - Delegated Proof of Stake
+      - Practical Byzantine Fault Tolerance
+  Embedded Systems:
+    Microcontrollers:
+      - ARM
+      - AVR
+      - PIC
+      - ESP
+      - STM32
+    RTOS:
+      - FreeRTOS
+      - Zephyr
+      - ThreadX
+      - RTX
+      - MicroC/OS
+    Languages:
+      - C
+      - C++
+      - Assembly
+      - Rust
+      - MicroPython
+    Firmware:
+      - Bootloaders
+      - Device Drivers
+      - Peripheral Interfaces
+      - Power Management
+      - OTA Updates
+    Communication:
+      - UART
+      - SPI
+      - I2C
+      - CAN
+      - USB
+      - Ethernet
+    Debugging:
+      - JTAG
+      - SWD
+      - Logic Analyzers
+      - Oscilloscopes
+      - Trace Tools
+  Cybersecurity:
+    Application Security:
+      - OWASP Top 10
+      - Secure Coding
+      - Input Validation
+      - Output Encoding
+      - Authentication
+      - Authorization
+      - Session Management
+      - CSRF Prevention
+      - XSS Prevention
+      - SQL Injection Prevention
+    Network Security:
+      - Firewalls
+      - IDS/IPS
+      - VPN
+      - SSL/TLS
+      - Network Segmentation
+      - Traffic Analysis
+      - DDoS Mitigation
+    Cryptography:
+      - Symmetric Encryption
+      - Asymmetric Encryption
+      - Hashing
+      - Digital Signatures
+      - PKI
+      - TLS/SSL
+    Security Testing:
+      - Penetration Testing
+      - Vulnerability Scanning
+      - Code Review
+      - Fuzzing
+      - Security Audits
+      - Red Teaming
+    Identity & Access Management:
+      - Authentication Methods
+      - Authorization Models
+      - Single Sign-On
+      - Multi-Factor Authentication
+      - Privileged Access Management
+      - Directory Services
+    Security Operations:
+      - SIEM
+      - SOC
+      - Incident Response
+      - Threat Intelligence
+      - Security Monitoring
+      - Log Analysis
+  VR/AR Development:
+    Platforms:
+      - Unity
+      - Unreal Engine
+      - Three.js
+      - A-Frame
+      - ARKit
+      - ARCore
+      - WebXR
+    Hardware:
+      - Oculus/Meta Quest
+      - HTC Vive
+      - Microsoft HoloLens
+      - Apple Vision Pro
+      - Magic Leap
+      - Mobile AR
+    Interaction:
+      - Controllers
+      - Hand Tracking
+      - Eye Tracking
+      - Voice Commands
+      - Haptic Feedback
+    Content Creation:
+      - 3D Modeling
+      - Texturing
+      - Animation
+      - Spatial Sound
+      - Performance Optimization
+    XR Design:
+      - Spatial UI/UX
+      - Locomotion Methods
+      - Accessibility
+      - Comfort Considerations
+      - Immersion Techniques
